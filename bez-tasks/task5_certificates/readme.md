@@ -1,0 +1,2 @@
+Kompilace : make \
+Spuštení : ./main

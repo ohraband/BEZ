@@ -1,0 +1,21 @@
+jdkfhhdkfhdskjfhjkvbdsblckjsEVP_PKEY_encrypt a EVP_PKEY_decrypt jsou funkce, které umožňují šifrovat krátké zprávy (např. klíč). Pokud to není nutné, nepoužíváme k šiforvání „normálních“ dat. Podívejte se na příklad na manuálové stránce (man EVP_PKEY_encrypt). Obsahuje však dvě chyby:
+
+                            EVP_PKEY_CTX_new bere 2 parametry místo 1 – předejte NULL jako druhý parametr (EVP_PKEY_CTX_new(pubkey, NULL))
+                            Konstanta určující typ zarovnání (padding) je špatně v EVP_PKEY_CTX_set_rsa_padding(ctx, RSA_OAEP_PADDING). Buď
+                            nenastavujte žádný padding (použije se výchozí hodnota), nebo
+                            použijte správnou konstantu, např. RSA_PKCS1_OAEP_PADDING.EVP_PKEY_encrypt a EVP_PKEY_decrypt jsou funkce, které umožňují šifrovat krátké zprávy (např. klíč). Pokud to není nutné, nepoužíváme k šiforvání „normálních“ dat. Podívejte se na příklad na manuálové stránce (man EVP_PKEY_encrypt). Obsahuje však dvě chyby:
+
+                                                                                      EVP_PKEY_CTX_new bere 2 parametry místo 1 – předejte NULL jako druhý parametr (EVP_PKEY_CTX_new(pubkey, NULL))
+                                                                                      Konstanta určující typ zarovnání (padding) je špatně v EVP_PKEY_CTX_set_rsa_padding(ctx, RSA_OAEP_PADDING). Buď
+                                                                                      nenastavujte žádný padding (použije se výchozí hodnota), nebo
+                                                                                      použijte správnou konstantu, např. RSA_PKCS1_OAEP_PADDING.EVP_PKEY_encrypt a EVP_PKEY_decrypt jsou funkce, které umožňují šifrovat krátké zprávy (např. klíč). Pokud to není nutné, nepoužíváme k šiforvání „normálních“ dat. Podívejte se na příklad na manuálové stránce (man EVP_PKEY_encrypt). Obsahuje však dvě chyby:
+
+                                                                                                                                                EVP_PKEY_CTX_new bere 2 parametry místo 1 – předejte NULL jako druhý parametr (EVP_PKEY_CTX_new(pubkey, NULL))
+                                                                                                                                                Konstanta určující typ zarovnání (padding) je špatně v EVP_PKEY_CTX_set_rsa_padding(ctx, RSA_OAEP_PADDING). Buď
+                                                                                                                                                nenastavujte žádný padding (použije se výchozí hodnota), nebo
+                                                                                                                                                použijte správnou konstantu, např. RSA_PKCS1_OAEP_PADDING.EVP_PKEY_encrypt a EVP_PKEY_decrypt jsou funkce, které umožňují šifrovat krátké zprávy (např. klíč). Pokud to není nutné, nepoužíváme k šiforvání „normálních“ dat. Podívejte se na příklad na manuálové stránce (man EVP_PKEY_encrypt). Obsahuje však dvě chyby:
+
+                                                                                                                                                                                                          EVP_PKEY_CTX_new bere 2 parametry místo 1 – předejte NULL jako druhý parametr (EVP_PKEY_CTX_new(pubkey, NULL))
+                                                                                                                                                                                                          Konstanta určující typ zarovnání (padding) je špatně v EVP_PKEY_CTX_set_rsa_padding(ctx, RSA_OAEP_PADDING). Buď
+                                                                                                                                                                                                          nenastavujte žádný padding (použije se výchozí hodnota), nebo
+                                                                                                                                                                                                          použijte správnou konstantu, např. RSA_PKCS1_OAEP_PADDING.

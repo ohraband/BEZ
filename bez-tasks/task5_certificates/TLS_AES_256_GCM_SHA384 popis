@@ -1,0 +1,5 @@
+Použitá funkcia: TLS_AES_256_GCM_SHA384
+TLS -> Transport Layer Security, použitý protokol
+AES_256 -> Advanced Encryption Standard s 256-bit kľúčom, symetrická šifra
+GCM ->  Galois/Counter mode, rýchly operačný mód pre šifrovanie AES
+SHA384 -> Secure hash algorithm, hash funkcia s 384-bit výstupom
